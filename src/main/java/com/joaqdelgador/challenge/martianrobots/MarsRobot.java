@@ -1,11 +1,11 @@
 package com.joaqdelgador.challenge.martianrobots;
 
-public class Robot {
+public class MarsRobot {
   private int x;
   private int y;
   private char orientation;
 
-  public Robot(int x, int y, char orientation){
+  public MarsRobot(int x, int y, char orientation){
     this.x = x;
     this.y = y;
     this.orientation = orientation;

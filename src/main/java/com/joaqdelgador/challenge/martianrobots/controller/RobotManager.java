@@ -1,12 +1,12 @@
 package com.joaqdelgador.challenge.martianrobots.controller;
 
 import com.joaqdelgador.challenge.martianrobots.MarsGrid;
-import com.joaqdelgador.challenge.martianrobots.Robot;
+import com.joaqdelgador.challenge.martianrobots.MarsRobot;
 
 public interface RobotManager {
-  Robot create(int x, int y, char orientation) throws Exception;
-  Robot advance(Robot robot);
-  Robot rotate(Robot robot, char rotation) throws Exception;
-  boolean isThereScent(Robot robot, MarsGrid marsGrid);
-  boolean willBeLost(Robot robot, MarsGrid marsGrid);
+  MarsRobot create(int x, int y, char orientation) throws Exception;
+  MarsRobot advance(MarsRobot marsRobot);
+  MarsRobot rotate(MarsRobot marsRobot, char rotation) throws Exception;
+  boolean isThereScent(MarsRobot marsRobot, MarsGrid marsGrid);
+  boolean willBeLost(MarsRobot marsRobot, MarsGrid marsGrid);
 }
