@@ -4,11 +4,13 @@ public class MarsRobot {
   private int x;
   private int y;
   private char orientation;
+  private boolean lost;
 
-  public MarsRobot(int x, int y, char orientation){
+  public MarsRobot(int x, int y, char orientation, boolean lost){
     this.x = x;
     this.y = y;
     this.orientation = orientation;
+    this.lost = lost;
   }
 
   public int getX() {
@@ -33,5 +35,13 @@ public class MarsRobot {
 
   public void setOrientation(char orientation) {
     this.orientation = orientation;
+  }
+
+  public boolean isLost() {
+    return lost;
+  }
+
+  public void setLost(boolean lost) {
+    this.lost = lost;
   }
 }
