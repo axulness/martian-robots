@@ -1,10 +1,10 @@
 package com.joaqdelgador.challenge.martianrobots;
 
-public class Mars {
+public class Scents {
   private int x;
   private int y;
 
-  public Mars(int x, int y){
+  public Scents(int x, int y){
     this.x = x;
     this.y = y;
   }
