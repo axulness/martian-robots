@@ -4,6 +4,7 @@ import com.joaqdelgador.challenge.martianrobots.MarsGrid;
 import com.joaqdelgador.challenge.martianrobots.MarsRobot;
 import com.joaqdelgador.challenge.martianrobots.MarsRobotInstructions;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class RobotActionServiceImpl implements RobotActionService {
@@ -18,6 +19,11 @@ public class RobotActionServiceImpl implements RobotActionService {
 
   public List<MarsRobot> executeScenario(int maximunGridX, int maximunGridY,
       MarsRobotInstructions... marsRobotInstructions) throws Exception {
+    return executeScenario(maximunGridX, maximunGridY, Arrays.asList(marsRobotInstructions));
+  }
+
+  public List<MarsRobot> executeScenario(int maximunGridX, int maximunGridY,
+      List<MarsRobotInstructions> marsRobotInstructions) throws Exception {
     MarsGrid mars = marsGridManager.createMarsGrid(maximunGridX, maximunGridY);
     List<MarsRobot> marsRobots = new ArrayList<MarsRobot>();
     for (MarsRobotInstructions eachInstruction : marsRobotInstructions) {

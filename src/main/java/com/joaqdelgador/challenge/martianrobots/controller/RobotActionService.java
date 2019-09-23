@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface RobotActionService {
   List<MarsRobot> executeScenario(int maximunGridX, int maximunGridY, MarsRobotInstructions...marsRobotInstructions) throws Exception;
+  List<MarsRobot> executeScenario(int maximunGridX, int maximunGridY, List<MarsRobotInstructions> marsRobotInstructions) throws Exception;
 }
