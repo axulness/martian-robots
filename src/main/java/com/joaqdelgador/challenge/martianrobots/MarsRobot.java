@@ -1,16 +1,33 @@
 package com.joaqdelgador.challenge.martianrobots;
 
 public class MarsRobot {
+
   private int x;
   private int y;
   private char orientation;
   private boolean lost;
 
-  public MarsRobot(int x, int y, char orientation, boolean lost){
+  public MarsRobot(int x, int y, char orientation, boolean lost) {
     this.x = x;
     this.y = y;
     this.orientation = orientation;
     this.lost = lost;
+  }
+
+  public boolean equals(Object other) {
+    if (other == null) {
+      return false;
+    }
+    if (other == this) {
+      return true;
+    }
+    if (!(other instanceof MarsRobot)) {
+      return false;
+    }
+    MarsRobot otherMyClass = (MarsRobot) other;
+    return otherMyClass.getX() == this.getX() && otherMyClass.getY() == this.getY()
+        && otherMyClass.getOrientation() == this.getOrientation() && otherMyClass.isLost() == this
+        .isLost();
   }
 
   public int getX() {

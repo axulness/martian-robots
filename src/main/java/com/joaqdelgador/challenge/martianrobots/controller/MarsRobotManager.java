@@ -3,13 +3,14 @@ package com.joaqdelgador.challenge.martianrobots.controller;
 import com.joaqdelgador.challenge.martianrobots.MarsGrid;
 import com.joaqdelgador.challenge.martianrobots.MarsRobot;
 
-public class MarsRobotManager implements RobotManager{
+public class MarsRobotManager implements RobotManager {
 
   public MarsRobot create(int x, int y, char orientation) throws Exception {
     if (x < 0 || y < 0) {
-      throw new IllegalStateException ("Starting coordinates can't be negative.");
-    } else if (orientation != 'N' && orientation != 'E' && orientation != 'S' && orientation != 'W') {
-      throw new IllegalStateException ("Starting orientation must be 'N', 'E', 'S' or 'W'");
+      throw new IllegalStateException("Starting coordinates can't be negative.");
+    } else if (orientation != 'N' && orientation != 'E' && orientation != 'S'
+        && orientation != 'W') {
+      throw new IllegalStateException("Starting orientation must be 'N', 'E', 'S' or 'W'");
     }
     return new MarsRobot(x, y, orientation, false);
   }
@@ -43,20 +44,30 @@ public class MarsRobotManager implements RobotManager{
         marsRobot.setOrientation(rotateRight(marsRobot.getOrientation()));
         break;
       default:
-        throw new IllegalStateException ("Rotation must be 'R' or 'L'");
+        throw new IllegalStateException("Rotation must be 'R' or 'L'");
     }
     return marsRobot;
   }
 
-  public boolean isThereScent(MarsRobot marsRobot, MarsGrid marsGrid) {
+  public boolean isThereScent(final MarsRobot marsRobot, MarsGrid marsGrid) {
+    for (MarsRobot eachScent : marsGrid.getScents())
+    {
+      if (eachScent.equals(marsRobot)) return true;
+    }
     return false;
   }
 
   public boolean willBeLost(MarsRobot marsRobot, MarsGrid marsGrid) {
-    return false;
+    MarsRobot futureMarsRobot = new MarsRobot(marsRobot.getX(), marsRobot.getY(),
+        marsRobot.getOrientation(), false);
+    futureMarsRobot = advance(futureMarsRobot);
+    return (futureMarsRobot.getOrientation() == 'N' && futureMarsRobot.getY() > marsGrid.getY())
+        || (futureMarsRobot.getOrientation() == 'E' && futureMarsRobot.getX() > marsGrid.getX())
+        || (futureMarsRobot.getOrientation() == 'S' && futureMarsRobot.getY() < 0)
+        || (futureMarsRobot.getOrientation() == 'W' && futureMarsRobot.getX() < 0);
   }
 
-  private static char rotateLeft (char initialOrientation) {
+  private static char rotateLeft(char initialOrientation) {
     switch (initialOrientation) {
       case 'N':
         return 'W';
@@ -69,7 +80,7 @@ public class MarsRobotManager implements RobotManager{
     }
   }
 
-  private static char rotateRight (char initialOrientation) {
+  private static char rotateRight(char initialOrientation) {
     switch (initialOrientation) {
       case 'N':
         return 'E';

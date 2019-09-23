@@ -6,7 +6,7 @@ import java.util.Set;
 public class MarsGrid {
   private int x;
   private int y;
-  private Set<Scents> scents = new HashSet<Scents>();
+  private Set<MarsRobot> scents = new HashSet<MarsRobot>();
 
   public MarsGrid(int x, int y){
     this.x = x;
@@ -29,11 +29,11 @@ public class MarsGrid {
     this.y = y;
   }
 
-  public Set<Scents> getScents() {
+  public Set<MarsRobot> getScents() {
     return scents;
   }
 
-  public void addScent (int x, int y){
-    scents.add(new Scents(x,y));
+  public void addScent (MarsRobot robot){
+    scents.add(new MarsRobot(robot.getX(), robot.getY(), robot.getOrientation(), false));
   }
 }
