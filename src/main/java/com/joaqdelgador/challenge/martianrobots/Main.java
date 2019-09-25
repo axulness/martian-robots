@@ -1,6 +1,10 @@
 package com.joaqdelgador.challenge.martianrobots;
 
 import com.joaqdelgador.challenge.martianrobots.controller.RobotActionService;
+import com.joaqdelgador.challenge.martianrobots.domain.MarsRobot;
+import com.joaqdelgador.challenge.martianrobots.domain.MarsRobotInstructions;
+import com.joaqdelgador.challenge.martianrobots.factory.RobotActionServiceFactory;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;

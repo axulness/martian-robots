@@ -1,4 +1,4 @@
-package com.joaqdelgador.challenge.martianrobots;
+package com.joaqdelgador.challenge.martianrobots.factory;
 
 import com.joaqdelgador.challenge.martianrobots.controller.MarsGridManagerImpl;
 import com.joaqdelgador.challenge.martianrobots.controller.MarsRobotManager;

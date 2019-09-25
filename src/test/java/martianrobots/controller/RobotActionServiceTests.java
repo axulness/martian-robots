@@ -2,9 +2,9 @@ package martianrobots.controller;
 
 import static org.junit.Assert.assertEquals;
 
-import com.joaqdelgador.challenge.martianrobots.MarsRobot;
-import com.joaqdelgador.challenge.martianrobots.MarsRobotInstructions;
-import com.joaqdelgador.challenge.martianrobots.RobotActionServiceFactory;
+import com.joaqdelgador.challenge.martianrobots.domain.MarsRobot;
+import com.joaqdelgador.challenge.martianrobots.domain.MarsRobotInstructions;
+import com.joaqdelgador.challenge.martianrobots.factory.RobotActionServiceFactory;
 import com.joaqdelgador.challenge.martianrobots.controller.RobotActionService;
 import java.util.List;
 import org.junit.Before;

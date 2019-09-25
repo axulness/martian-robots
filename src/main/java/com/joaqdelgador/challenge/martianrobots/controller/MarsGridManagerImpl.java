@@ -1,6 +1,6 @@
 package com.joaqdelgador.challenge.martianrobots.controller;
 
-import com.joaqdelgador.challenge.martianrobots.MarsGrid;
+import com.joaqdelgador.challenge.martianrobots.domain.MarsGrid;
 
 public class MarsGridManagerImpl implements MarsGridManager {
 

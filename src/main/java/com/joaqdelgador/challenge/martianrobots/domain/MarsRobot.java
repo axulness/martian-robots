@@ -1,4 +1,4 @@
-package com.joaqdelgador.challenge.martianrobots;
+package com.joaqdelgador.challenge.martianrobots.domain;
 
 public class MarsRobot {
 

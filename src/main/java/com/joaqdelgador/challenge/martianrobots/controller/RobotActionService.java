@@ -1,7 +1,7 @@
 package com.joaqdelgador.challenge.martianrobots.controller;
 
-import com.joaqdelgador.challenge.martianrobots.MarsRobot;
-import com.joaqdelgador.challenge.martianrobots.MarsRobotInstructions;
+import com.joaqdelgador.challenge.martianrobots.domain.MarsRobot;
+import com.joaqdelgador.challenge.martianrobots.domain.MarsRobotInstructions;
 import java.util.List;
 
 public interface RobotActionService {

@@ -1,8 +1,8 @@
 package com.joaqdelgador.challenge.martianrobots.controller;
 
-import com.joaqdelgador.challenge.martianrobots.MarsGrid;
-import com.joaqdelgador.challenge.martianrobots.MarsRobot;
-import com.joaqdelgador.challenge.martianrobots.MarsRobotInstructions;
+import com.joaqdelgador.challenge.martianrobots.domain.MarsGrid;
+import com.joaqdelgador.challenge.martianrobots.domain.MarsRobot;
+import com.joaqdelgador.challenge.martianrobots.domain.MarsRobotInstructions;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

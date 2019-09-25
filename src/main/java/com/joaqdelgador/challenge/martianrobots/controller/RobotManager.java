@@ -1,7 +1,7 @@
 package com.joaqdelgador.challenge.martianrobots.controller;
 
-import com.joaqdelgador.challenge.martianrobots.MarsGrid;
-import com.joaqdelgador.challenge.martianrobots.MarsRobot;
+import com.joaqdelgador.challenge.martianrobots.domain.MarsGrid;
+import com.joaqdelgador.challenge.martianrobots.domain.MarsRobot;
 
 public interface RobotManager {
   MarsRobot create(int x, int y, char orientation) throws Exception;
