@@ -61,6 +61,7 @@ public class MarsRobotManager implements RobotManager {
     MarsRobot futureMarsRobot = new MarsRobot(marsRobot.getX(), marsRobot.getY(),
         marsRobot.getOrientation(), false);
     futureMarsRobot = advance(futureMarsRobot);
+    //any of the movements will imply being out of the grid?
     return (futureMarsRobot.getOrientation() == 'N' && futureMarsRobot.getY() > marsGrid.getY())
         || (futureMarsRobot.getOrientation() == 'E' && futureMarsRobot.getX() > marsGrid.getX())
         || (futureMarsRobot.getOrientation() == 'S' && futureMarsRobot.getY() < 0)

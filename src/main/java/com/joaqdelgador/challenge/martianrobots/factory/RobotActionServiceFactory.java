@@ -2,8 +2,8 @@ package com.joaqdelgador.challenge.martianrobots.factory;
 
 import com.joaqdelgador.challenge.martianrobots.controller.MarsGridManagerImpl;
 import com.joaqdelgador.challenge.martianrobots.controller.MarsRobotManager;
-import com.joaqdelgador.challenge.martianrobots.controller.RobotActionService;
-import com.joaqdelgador.challenge.martianrobots.controller.RobotActionServiceImpl;
+import com.joaqdelgador.challenge.martianrobots.service.RobotActionService;
+import com.joaqdelgador.challenge.martianrobots.service.RobotActionServiceImpl;
 
 public class RobotActionServiceFactory {
 
